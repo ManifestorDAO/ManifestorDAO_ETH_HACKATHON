@@ -1,7 +1,7 @@
 "use client";
 import { useState ,useEffect,useCallback} from "react";
 import LoadingScreen from './loading'
-import abi from './Manifestor.json'
+import abi from './manifestor.json'
 import {
   useExploreProfiles,
   useExplorePublications,
