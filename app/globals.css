@@ -1,0 +1,503 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+    --font-family:"halogen";
+  }
+ 
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
+}
+.backgroundCSS {
+  background-image: url(./background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+ 
+}
+/* In your CSS file or inline styles */
+
+/* Container styling */
+.p-logged-in {
+  padding: 1rem;
+}
+
+/* Title styling */
+.logged-in-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Twitter section styling */
+.twitter-section {
+  margin-bottom: 1rem;
+}
+
+/* Twitter handle styling */
+.twitter-handle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Twitter profile picture styling */
+.twitter-profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+/* Link Twitter button styling */
+.link-twitter-button {
+  background-color: #1da1f2; /* Twitter blue */
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.link-twitter-button:hover {
+  background-color: #0d86d0; /* Darker shade of Twitter blue on hover */
+}
+
+/* Wallet section styling */
+.wallet-section {
+  margin-top: 1rem;
+}
+
+/* Wallet address styling */
+.wallet-address {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Wallet balance styling */
+.wallet-balance {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Ranks styling */
+.ranks-section {
+  margin-top: 1rem;
+}
+
+/* Rank list styling */
+.rank-list {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+/* Logout button styling */
+.logout-button {
+  margin-top: 1rem;
+  background-color: #ff6347; /* Tomato red */
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.main-Text {
+  font-size: 3.5rem;
+  line-height: 80%;
+ transform: rotateX(0) rotateY(-25deg);
+  text-transform: uppercase;
+  width: 500px;
+text-align: center;
+  color: #b9dfff;
+  color: #fff;
+
+  margin: 3rem auto;
+  position: relative;
+  padding: 2rem 0 9rem;
+  text-shadow: 0 0 2px #fff,0 0 5px #fff,0 0 7px #fff,0 0 10px #228dff,0 0 17px #228dff,0 0 20px #228dff;
+
+
+}
+.main-Text span {
+  display: inline-block;
+}
+.circular--square { border-radius: 50%; }
+.logout-button:hover {
+  background-color: #ff4500; /* Darker shade of tomato red on hover */
+}
+@font-face {
+  font-family: "Frens";
+  src: url("Manifest.ttf");
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+/* CSS */
+.spell-section-flex {
+  padding: 1rem;
+  gap: 1rem;
+}
+
+
+/* User info section styling */
+.user-info-section {
+  padding: 1rem;
+  background-color: var(--card);
+  color: var(--card-foreground);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+/* Send spell section styling */
+.send-spell-section {
+  padding: 1rem;
+  background-color: var(--card);
+  color: var(--card-foreground);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  align-items: stretch;  /* Ensures that child elements stretch to fill the available width */
+}
+
+/* Profile picture styling */
+.profile-picture {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+/* Username input, spell select, and send spell button styling */
+.username-input,
+.spell-select,
+.send-spell-button {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.bg {
+  background-image: url(./background.svg) no-repeat;
+  background-size: 110% auto;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  z-index: -3;
+}
+.bg::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #000;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+@keyframes sf-fly-by-1 {
+  from {
+      transform: translateZ(-600px);
+      opacity: 0.5;
+  }
+  to {
+      transform: translateZ(0);
+      opacity: 0.5;
+  }
+}
+@keyframes sf-fly-by-2 {
+  from {
+      transform: translateZ(-1200px);
+      opacity: 0.5;
+  }
+  to {
+      transform: translateZ(-600px);
+      opacity: 0.5;
+  }
+}
+@keyframes sf-fly-by-3 {
+  from {
+      transform: translateZ(-1800px);
+      opacity: 0.5;
+  }
+  to {
+      transform: translateZ(-1200px);
+      opacity: 0.5;
+  }
+}
+.star-field {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  perspective: 600px;
+  -webkit-perspective: 600px;
+  z-index: -1;
+}
+.star-field .layer {
+  box-shadow: -411px -476px #cccccc, 777px -407px #d4d4d4, -387px -477px #fcfcfc, -91px -235px #d4d4d4, 491px -460px #f7f7f7, 892px -128px #f7f7f7, 758px -277px #ededed, 596px 378px #cccccc, 647px 423px whitesmoke, 183px 389px #c7c7c7,
+      524px -237px #f0f0f0, 679px -535px #e3e3e3, 158px 399px #ededed, 157px 249px #ededed, 81px -450px #ebebeb, 719px -360px #c2c2c2, -499px 473px #e8e8e8, -158px -349px #d4d4d4, 870px -134px #cfcfcf, 446px 404px #c2c2c2,
+      440px 490px #d4d4d4, 414px 507px #e6e6e6, -12px 246px #fcfcfc, -384px 369px #e3e3e3, 641px -413px #fcfcfc, 822px 516px #dbdbdb, 449px 132px #c2c2c2, 727px 146px #f7f7f7, -315px -488px #e6e6e6, 952px -70px #e3e3e3,
+      -869px -29px #dbdbdb, 502px 80px #dedede, 764px 342px #e0e0e0, -150px -380px #dbdbdb, 654px -426px #e3e3e3, -325px -263px #c2c2c2, 755px -447px #c7c7c7, 729px -177px #c2c2c2, -682px -391px #e6e6e6, 554px -176px #ededed,
+      -85px -428px #d9d9d9, 714px 55px #e8e8e8, 359px -285px #cfcfcf, -362px -508px #dedede, 468px -265px #fcfcfc, 74px -500px #c7c7c7, -514px 383px #dbdbdb, 730px -92px #cfcfcf, -112px 287px #c9c9c9, -853px 79px #d6d6d6,
+      828px 475px #d6d6d6, -681px 13px #fafafa, -176px 209px #f0f0f0, 758px 457px #fafafa, -383px -454px #ededed, 813px 179px #d1d1d1, 608px 98px whitesmoke, -860px -65px #c4c4c4, -572px 272px #f7f7f7, 459px 533px #fcfcfc,
+      624px -481px #e6e6e6, 790px 477px #dedede, 731px -403px #ededed, 70px -534px #cccccc, -23px 510px #cfcfcf, -652px -237px whitesmoke, -690px 367px #d1d1d1, 810px 536px #d1d1d1, 774px 293px #c9c9c9, -362px 97px #c2c2c2,
+      563px 47px #dedede, 313px 475px #e0e0e0, 839px -491px #e3e3e3, -217px 377px #d4d4d4, -581px 239px #c2c2c2, -857px 72px #cccccc, -23px 340px #dedede, -837px 246px white, 170px -502px #cfcfcf, 822px -443px #e0e0e0, 795px 497px #e0e0e0,
+      -814px -337px #cfcfcf, 206px -339px #f2f2f2, -779px 108px #e6e6e6, 808px 2px #d4d4d4, 665px 41px #d4d4d4, -564px 64px #cccccc, -380px 74px #cfcfcf, -369px -60px #f7f7f7, 47px -495px #e3e3e3, -383px 368px #f7f7f7, 419px 288px #d1d1d1,
+      -598px -50px #c2c2c2, -833px 187px #c4c4c4, 378px 325px whitesmoke, -703px 375px #d6d6d6, 392px 520px #d9d9d9, -492px -60px #c4c4c4, 759px 288px #ebebeb, 98px -412px #c4c4c4, -911px -277px #c9c9c9;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 4px;
+  width: 4px;
+  border-radius: 2px;
+}
+.star-field .layer:nth-child(1) {
+  animation: sf-fly-by-1 5s linear infinite;
+}
+.star-field .layer:nth-child(2) {
+  animation: sf-fly-by-2 5s linear infinite;
+}
+.star-field .layer:nth-child(3) {
+  animation: sf-fly-by-3 5s linear infinite;
+}
+.parallax-container {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin: 0 0;
+}
+
+.parallax-layer-back {
+  transform: translateZ(-1px) scale(2);
+
+  background-size: cover;
+}
+
+.rotate {
+  animation: rotation 45s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+
+.parallax-layer-unicorn {
+  transform: translateZ(0) scale(1);
+  background: url('./unifest.svg') no-repeat center center;
+  min-height: 150vh; /* Adjust this value based on your content length */
+
+  
+
+  scroll-snap-align: start; /* Optional: Can help with snapping in some cases */
+}
+.parallax-layer-hand {
+  transform: translateZ(0) scale(1);
+  background: url('./hand.svg') no-repeat center center;
+  min-height: 150vh; /* Adjust this value based on your content length */
+  shape-rendering: crispEdges;
+  transform: rotate(30deg);
+z-index: 3;
+shape-outside: url('./hand.svg');
+  scroll-snap-align: start; /* Optional: Can help with snapping in some cases */
+}
+.parallax-layer-handright {
+  transform: translateZ(0) scale(1);
+  background: url('./hand.svg') no-repeat center center;
+  min-height: 150vh; /* Adjust this value based on your content length */
+  shape-rendering: crispEdges;
+  transform: rotate(30deg);
+z-index: 3;
+shape-outside: url('./hand.svg');
+  scroll-snap-align: start; /* Optional: Can help with snapping in some cases */
+}
+.parallax-layer-mandala {
+  transform: translateZ(0) scale(1);
+  background: url('./mandala.svg') no-repeat center center;
+  min-height: 150vh; /* Adjust this value based on your content length */
+  shape-rendering: crispEdges;
+z-index: 3;
+shape-outside: url('./mandala.svg');
+  scroll-snap-align: start; /* Optional: Can help with snapping in some cases */
+}
+.parallax-layer-ohmfrog {
+  transform: translateZ(0) scale(1);
+  background: url('./ohmfrog.svg') no-repeat center center;
+  min-height: 100vh; /* Adjust this value based on your content length */
+  shape-rendering: crispEdges;
+  transform: scaleX(-1);
+z-index: 3;
+shape-outside: url('./ohmfrog.svg');
+  scroll-snap-align: start; /* Optional: Can help with snapping in some cases */
+}
+.parallax-layer-ohmfrog:hover {
+  background: url('./ohmfrogmanifest.svg') no-repeat center center;
+}
+.manifestbutton{
+ 
+
+
+backdrop-filter: " blur(10px)";
+
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  will-change: box-shadow,transform;
+  background: linear-gradient(180deg, rgba(223,232,244,0.15), rgba(179,253,255,0.15));
+  box-shadow: 0 0 1px #fff,0 0 3px #fff,0 0 5px #fff,0 0 7px #228dff,0 0 12px #228dff,0 0 15px #228dff;
+
+  border-radius: 6px;
+  color: #fff;
+  height: 50px;
+  font-size: 18px;
+  text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+  transition: box-shadow 0.15s ease,transform 0.15s ease;
+
+  
+}
+.manifestbutton:hover {
+  box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #3c4fe0;
+  transform: translateY(-2px);
+}
+
+.manifestbutton:active {
+  box-shadow: inset 0px 3px 7px #3c4fe0;
+  transform: translateY(2px);
+}
+.parallax-layer-ohmfrogright {
+  transform: translateZ(0) scale(1);
+  background: url('./ohmfrogright.svg') no-repeat center center;
+  min-height: 100vh; /* Adjust this value based on your content length */
+  shape-rendering: crispEdges;
+  transform: scaleX(-1);
+z-index: 3;
+shape-outside: url('./ohmfrog.svg');
+  scroll-snap-align: start; /* Optional: Can help with snapping in some cases */
+}
+.parallax-layer-ohmfrogright:hover {
+  background: url('./ohmfrogmanifestright.svg') no-repeat center center;
+}
+.wave {
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 5s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.parallax-layer-psyfrog {
+  transform: translateZ(0) scale(1);
+  background: url('./psyfrog.svg') no-repeat center center;
+  min-height: 150vh; /* Adjust this value based on your content length */
+  shape-rendering: crispEdges;
+
+  scroll-snap-align: start; /* Optional: Can help with snapping in some cases */
+}
+.parallax-layer-meditativefrog {
+  transform: translateZ(0) scale(1);
+  background: url('./meditativefrog.svg') no-repeat center center;
+  min-height: 100vh; /* Adjust this value based on your content length */
+
+  
+
+  scroll-snap-align: start; /* Optional: Can help with snapping in some cases */
+}
+.parallax-layer-middle:active {
+  animation-play-state: running; /* When the user interacts (scrolls), the animation runs */
+}
+
+.parallax-layer-front {
+  transform: translateZ(1px) scale(1);
+  background: rgba(255, 255, 255, 0.5);  /* Semi-transparent just for the demo */
+}
+
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .spell-section-flex {
+      gap: 2rem;
+  }
+  .profile-picture {
+      width: 100px;
+      height: 100px;
+  }
+}

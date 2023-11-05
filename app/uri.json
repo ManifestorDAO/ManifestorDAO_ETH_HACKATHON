@@ -1,0 +1,14 @@
+{
+    "hash": "02117",
+    "name": "ManifestorDAO",
+    "image": "https://nftstorage.link/ipfs/bafybeiehi2xba7ptbob3sdvkub7syjxdoqyjfyb7nvly65fom64wnqbzje",
+    "edition": 4,
+    "date": 1667730505354,
+    "attributes": [
+      {
+        "trait_type": "isManifestor",
+        "value": "true"
+      }
+     
+    ]
+  }

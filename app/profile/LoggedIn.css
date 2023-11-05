@@ -1,0 +1,52 @@
+/* CSS */
+.profile-page {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 8px;
+}
+
+.twitter-info .twitter-handle {
+    font-size: 16px;
+    text-align: center;
+}
+
+.wallet-info, .ranks, .actions {
+    width: 100%;
+    margin-bottom: 16px;
+    text-align: center;
+
+}
+
+.actions .link-twitter-button, .actions .logout-button {
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;  /* Space between buttons */
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .profile-page {
+        padding: 32px;
+    }
+
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+    }
+}
