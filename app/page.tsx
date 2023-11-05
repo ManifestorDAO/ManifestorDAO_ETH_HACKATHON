@@ -55,7 +55,7 @@ export default function Home() {
   const [manifestorData, setmanifestorData] = useState("");
   const [selectedSpell, setSelectedSpell] = useState("Spell 1");
   const [spellPrice, setSpellPrice] = useState("10"); // A
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
   const [isCLient, setIsClient] = useState(false)
 
 
@@ -135,7 +135,7 @@ export default function Home() {
      
     "
     >
-      <div style={{width:"100%"}}>
+    
       <Parallax
         speed={10}
         translateY={isMobile ? ["0px", "-100px"]:["100px", "-100px"]}
@@ -294,7 +294,7 @@ export default function Home() {
         />
         </div>
           </Parallax>
-          </div>
+        
 
 
 
