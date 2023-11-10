@@ -39,6 +39,7 @@
     "react-query": "^3.39.3",
     "react-scroll-motion": "^0.3.2",
     "react-scroll-parallax": "^3.4.2",
+    "react-scroll-rotate": "^0.0.7",
     "react-spring": "^9.7.3",
     "react-svg": "^16.1.27",
     "survey-core": "^1.9.112",

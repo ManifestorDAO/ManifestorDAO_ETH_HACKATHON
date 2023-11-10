@@ -2,6 +2,7 @@
 import { useState ,useEffect,useCallback} from "react";
 import LoadingScreen from './loading'
 import abi from './manifestor.json'
+import  { ScrollRotate } from 'react-scroll-rotate';
 import {
   useExploreProfiles,
   useExplorePublications,
@@ -134,6 +135,7 @@ export default function Home() {
       className="
      
     "
+    style={{overflowX:"hidden"}}
     >
     
       <Parallax
@@ -181,22 +183,8 @@ export default function Home() {
               textShadow: "none",
             }}
           >
-            {" "}
-            <Typewriter
-             options={{cursor:""}}
-  onInit={(typewriter) => {
-    typewriter.typeString('Evolve your on-chain manifesting powers to unlock the akashic abundance stored for you')
-      .callFunction(() => {
-        console.log('String typed out!');
-      })
-      .pauseFor(2500)
-     
-      .callFunction(() => {
-        console.log('All strings were deleted');
-      })
-      .start();
-  }}
-/>
+            {"Evolve your on-chain manifesting powers to unlock the akashic abundance stored for you "}
+           
          
           </div>
         </div>
@@ -224,14 +212,16 @@ export default function Home() {
           }}
         >
           {" "}
+          <ScrollRotate from={0} to={360}>
           <Image
             src="/psybackground.webp"
             width={5000}
             height={5000}
             alt="Picture of the author"
-            className="rotate"
-            style={{ zIndex:-5, position: "relative", left: "0%", width: "10000px" }}
+            
+            style={{ zIndex:-5, position: "relative", left: "0%", width: "20000px" }}
           />
+          </ScrollRotate>
         </div>
         <Image
             src="/collumns.webp"
@@ -258,16 +248,16 @@ export default function Home() {
        
          <Image
           src="/meditativefrog.svg"
-          width={500}
-          height={500}
+          width={1000}
+          height={1000}
           alt="Picture of the author"
-          style={{ position:"absolute",top:"700px",left:"35%",width:"30%",zIndex:2,}}
+          style={{ position:"absolute",top:"600px",left:"35%",width:"30%",zIndex:2,}}
         />
         
         </div>
           </Parallax>
           <Parallax speed={30} translateY={[ '0vh','-30vh']}  easing="easeInQuad">
-      <div
+          {user &&( <div
         style={{
           display: "flex",
           alignItems: "center",
@@ -277,8 +267,8 @@ export default function Home() {
          
         }}
       >
-        <Image
-          src="/ohmfrog.svg"
+      <Image
+          src= "/ohmfrogmanifest.svg"
           width={500}
           height={500}
           alt="Picture of the author"
@@ -286,13 +276,39 @@ export default function Home() {
         />
         
          <Image
-          src="/ohmfrogmanifestright.svg"
+          src= "/ohmfrogmanifest.svg"
           width={500}
           height={500}
           alt="Picture of the author"
-          style={{ position:"absolute",right:"10%",width:"15%",zIndex:2,}}
+          style={{ position:"absolute",right:"10%",width:"15%",zIndex:2,transform: "scaleX(-1)"}}
         />
-        </div>
+        </div>)}
+        {!user &&( <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100%",
+          left: "25%",
+         
+        }}
+      >
+      <Image
+          src= "/ohmfrog.svg"
+          width={500}
+          height={500}
+          alt="Picture of the author"
+          style={{ position:"absolute",left:"10%",width:"15%",zIndex:2,}}
+        />
+        
+         <Image
+          src= "/ohmfrog.svg"
+          width={500}
+          height={500}
+          alt="Picture of the author"
+          style={{ position:"absolute",right:"10%",width:"15%",zIndex:2, transform: "scaleX(-1)"}}
+        />
+        </div>)}
           </Parallax>
         
 

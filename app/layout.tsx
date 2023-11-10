@@ -49,7 +49,7 @@ export default function RootLayout({ children }) {
       <meta name="theme-color" content="#000000" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-      <body className={inter.className} >
+      <body className={inter.className} style={{overflowX:"hidden"}}>
        <div  style={{zIndex:-1,position:"absolute",height: isMobile ?"130%":"150%",width:"110%",top:"-10px",left:"-25px"}}>
        <Image
       src="/background.svg"
